@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fs = require("fs"); 
-const Canvas = require("canvas");
-const jimp = require("jimp");
-   let points = {}
-   
-const prefix = '!'
+const prefix = "!"
+client.on('ready', () => {
+  console.log('---------------');
+  console.log(' Bot Is Online')
+  console.log('---------------')
+});
+
   client.on('message', message => {
     if(message.author.bot) return;
             if (!points[message.author.id]) points[message.author.id] = {
